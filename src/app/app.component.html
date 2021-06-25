@@ -1,0 +1,10 @@
+<p>Ankieta COVID-19</p>
+
+<div *ngFor="let i of tablica" class="pytania">
+  {{i.nazwa}}
+  <app-pytania [nazwa]="i.nazwa" [(odpowiedz)]="i.odpowiedz"></app-pytania>
+</div>
+
+<pre *ngFor="let i of tablica">
+  Pytanie {{i.id}}  {{i.odpowiedz|json}}
+</pre>
